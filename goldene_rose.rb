@@ -13,7 +13,6 @@ class GoldeneRose
     @artikel << Artikel.new("Mangustenelixir", 5, 7)
     @artikel << Artikel.new("Sulfur, Hand von Ragnaros", 0, 80)
     @artikel << Artikel.new("Backstage-Pässe für ein TAFKAL80ETC Konzert", 15, 20)
-    @artikel << Artikel.new("Verzauberter Mana Kuchen", 3, 6)
   end
 
   def aktualisiere_qualitaet
