@@ -19,3 +19,13 @@ if [[ -s Gemfile ]] && builtin command -v bundle >/dev/null
 then
   bundle install | GREP_OPTIONS= \grep -vE '^Using|Your bundle is complete'
 fi
+
+cat <<- README
+
+This project is Codersdojo-enabled:
+  run-once.sh      # runs your tests once
+  run-endless.sh   # runs your tests endlessly via run-once.sh
+
+Run run-endless.sh and start your kata. (On Mac/Linux you have to call ./run-endless.sh.)
+Afterwards, you can upload your Kata to codersdojo.org to analyze your action.
+README
