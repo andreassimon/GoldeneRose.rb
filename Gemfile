@@ -1,3 +1,4 @@
-source 'http://rubygems.org'
+source :rubygems
 
 gem 'minitest-reporters'
+gem 'codersdojo'

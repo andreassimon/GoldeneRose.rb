@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+# This is an RVM Project .rvmrc file, used to automatically load the ruby
+# development environment upon cd'ing into the directory
+
+# First we specify our desired <ruby>[@<gemset>], the @gemset name is optional,
+rvm use 1.9.3
+
+# If you use bundler, this might be useful to you:
+if [[ -s Gemfile ]] && {
+  ! builtin command -v bundle >/dev/null ||
+  builtin command -v bundle | GREP_OPTIONS= \grep $rvm_path/bin/bundle >/dev/null
+}
+then
+  printf "%b" "The rubygem 'bundler' is not installed. Installing it now.\n"
+  gem install bundler
+fi
+if [[ -s Gemfile ]] && builtin command -v bundle >/dev/null
+then
+  bundle install | GREP_OPTIONS= \grep -vE '^Using|Your bundle is complete'
+fi
