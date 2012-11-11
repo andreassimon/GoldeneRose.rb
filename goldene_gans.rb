@@ -6,15 +6,11 @@ class GoldeneGans
 
   @artikel = []
 
-  def initialize
-    @artikel = []
-    @artikel << Artikel.new("+5 Geschicklichkeits-Weste", 10, 20)
-    @artikel << Artikel.new("Alter Gouda", 2, 0)
-    @artikel << Artikel.new("Mangustenelixir", 5, 7)
-    @artikel << Artikel.new("Fedoras", 0, 80)
-    @artikel << Artikel.new("Backstage-Pässe für ein Ruby Perry Konzert", 15, 20)
+  def initialize(artikel)
+    @artikel = artikel
   end
 
+  attr_reader :artikel
 
   def aktualisiere_qualitaet
 
