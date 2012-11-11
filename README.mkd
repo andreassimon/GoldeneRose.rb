@@ -1,3 +1,8 @@
+Slightly modified german Version of the guilded rose refactoring kata.
+Source: http://www.iamnotmyself.com/2011/02/13/RefactorThisTheGildedRoseKata.aspx
+
+---
+
 Seid gegrüßt in der Goldenen Gans.
 
 Wie ihr wisst, sind wir ein kleiner Gemischtwarenhandel mit Hauptsitz in der Hauptstadt, 
