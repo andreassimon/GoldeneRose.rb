@@ -3,6 +3,12 @@
 require './goldene_gans.rb'
 require './artikel.rb'
 require 'minitest/autorun'
+begin
+  require 'minitest/reporters'
+  MiniTest::Reporters.use!
+rescue LoadError
+  puts "minitest/reporters is not installed.\nYou can do so by executing \`gem install minitest-reporters\`\n\n"
+end
 
 #    @artikel = []
 #    @artikel << Artikel.new("+5 Geschicklichkeits-Weste", 10, 20)
