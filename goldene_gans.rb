@@ -2,7 +2,7 @@
 
 require './artikel.rb'
 
-class GoldeneRose
+class GoldeneGans
 
   @artikel = []
 
@@ -14,6 +14,7 @@ class GoldeneRose
     @artikel << Artikel.new("Fedoras", 0, 80)
     @artikel << Artikel.new("Backstage-Pässe für ein Ruby Perry Konzert", 15, 20)
   end
+
 
   def aktualisiere_qualitaet
 
@@ -28,12 +29,12 @@ class GoldeneRose
         if (@artikel[i].qualitaet < 50)
           @artikel[i].qualitaet = @artikel[i].qualitaet + 1
           if (@artikel[i].name == "Backstage-Pässe für ein Ruby Perry Konzert")
-            if (@artikel[i].haltbarkeitsdauer < 11)
+            if (@artikel[i].verkaufenIn < 11)
               if (@artikel[i].qualitaet < 50)
                 @artikel[i].qualitaet = @artikel[i].qualitaet + 1
               end
             end
-            if (@artikel[i].haltbarkeitsdauer < 6)
+            if (@artikel[i].verkaufenIn < 6)
               if (@artikel[i].qualitaet < 50)
                 @artikel[i].qualitaet = @artikel[i].qualitaet + 1
               end
@@ -42,9 +43,9 @@ class GoldeneRose
         end
       end
       if (@artikel[i].name != "Fedoras")
-        @artikel[i].haltbarkeitsdauer = @artikel[i].haltbarkeitsdauer - 1;
+        @artikel[i].verkaufenIn = @artikel[i].verkaufenIn - 1;
       end
-      if (@artikel[i].haltbarkeitsdauer < 0)
+      if (@artikel[i].verkaufenIn < 0)
         if (@artikel[i].name != "Alter Gouda")
           if (@artikel[i].name != "Backstage-Pässe für ein Ruby Perry Konzert")
             if (@artikel[i].qualitaet > 0)
