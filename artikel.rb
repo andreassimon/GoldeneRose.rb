@@ -2,11 +2,11 @@
 
 class Artikel
 
-  attr_accessor :name, :haltbarkeitsdauer, :qualitaet
+  attr_accessor :name, :verkaufenIn, :qualitaet
 
-  def initialize (name, haltbarkeitsdauer, qualitaet)
+  def initialize (name, verkaufenIn, qualitaet)
     @name = name
-    @haltbarkeitsdauer = haltbarkeitsdauer
+    @verkaufenIn = verkaufenIn
     @qualitaet = qualitaet
   end
 
