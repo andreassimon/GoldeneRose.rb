@@ -1,19 +1,18 @@
 # encoding: utf-8
 
-require './goldene_rose.rb'
-
+require './goldene_gans.rb'
+require './artikel.rb'
 require 'minitest/autorun'
 require 'minitest/reporters'
 MiniTest::Reporters.use!
 
-
-describe GoldeneRose do
+describe GoldeneGans do
 
   subject do
-    GoldeneRose.new
+    GoldeneGans.new
   end
 
-  it "sollte irgendetwas tun" do
+  it "should do something" do
     subject.aktualisiere_qualitaet
   end
 
