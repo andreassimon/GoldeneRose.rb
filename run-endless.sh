@@ -1,2 +1,2 @@
 #!/bin/sh
-codersdojo start run-once.sh
+bundle exec codersdojo start run-once.sh

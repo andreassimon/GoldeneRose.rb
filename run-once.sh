@@ -1,2 +1,2 @@
 #!/bin/sh
-ruby goldene_rose_test.rb
+bundle exec ruby goldene_gans_test.rb
